@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+    padding-top: 30px;
+    background-color:#5cdb95;
+    opacity: 0.99;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 734.6335px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #5cdb95;
+}
+
+li {
+  float: left;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+li a {
+  display:block;
+  color: #05386b;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size:x-large;
+  font-family: sans-serif;
+  border: 3px solid #05386b;
+  border-radius: 4px;
+}
+
+li a:hover {
+  background-color: #8ee4af;/* detta ändrar färgen på knappen när man håller musen över den*/
+  border-radius: 4px;
+}
+body{
+  background-color: #5cdb95;
+}
+div.a{
+  margin-top: 5%;
+  margin-left: 4%;
+  margin-right: 20%;
+}
+
+div.a p{
+  font-size: xx-large;
+  font-family: sans-serif;
+  color: #05386b;
+  text-align: left;
+}
+
+div.b img{
+  float: right;
+  margin-right: 40px;
+}
+
+div.column{
+  float: left;
+  width: 31%;
+  padding: 15px;
+  text-align: center;
+}
+div.column{
+  font-family: sans-serif;/*ändra fonten*/
+  color: #05386b;
+}
+div.column p{
+  font-size: large;
+}
+div.column img{
+  border-radius: 16px;/*rundade kanter på de tre bilderna*/
+}
+
+div.row{
+  margin-top: 200px;
+}
+div.row:after{
+  content:"";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  
+}
+footer{
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #05386b;
+}
+hr{
+  border: 3px solid #05386b;
+  border-radius: 4px;
+  margin: 10px;
+
+}
+hr.uppe{
+  margin-top: 20px;
+}
