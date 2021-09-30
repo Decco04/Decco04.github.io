@@ -2,54 +2,85 @@
 <html lang="sv">
     <head>
         <link rel="stylesheet" href="main.css" type="text/css">
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) {
+              document.documentElement.setAttribute("data-theme", "light");
+              var themeSwitcher = document.getElementById("theme-switcher");
+              themeSwitcher.onclick = function() {
+                var currentTheme = document.documentElement.getAttribute("data-theme");
+                var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+                document.documentElement.setAttribute("data-theme", switchToTheme);
+              }
+            });
+          </script> <!--Kunde inte lösa det med en extern java script så fick skriva det direkt här-->
+          
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <!--gör så att hemsidan ser bra ut på alla enheter och skärm storlekar-->
         <title>Google</title>
+        <meta name="description" content="En hemsida om Google">
+        <meta name="author" content="Malte Lindberg"> 
+
+        <meta property="og:title" content="Google">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://decco04.github.io/">
+        <meta property="og:description" content="En hemsida om google">
+        <meta property="og:image" content="cykel.png">
+        <!--Dessa tagsen används för när sidan delas på sociala medier och beskriver vilken information som synns under länken (behövs inte egentligen för denna uppgiften men ville bara testa)-->
     </head>
     <body>
         <header>
-            <img class="logo" src="Google1.png" alt="google"><!--Google logan som ligger högst upp på websidan-->
-
+            <img class="logo" src="Google1.png" alt="google">
+            <!--Google logan som ligger högst upp på websidan-->
+            <button id="theme-switcher">Theme</button>
         </header>
         <nav>
             <ul class="nav_ul">
-                <li class="nav_list1"><a href="https://www.google.com/" target="_blank"> Google</a></li>
-                <li class="nav_list2"><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
-                <li class="nav_list2"><a href="https://www.google.com/chrome/" target="_blank">Chrome</a></li>
-                <li class="nav_list1"><a href="https://www.android.com/" target="_blank"> Android</a></li>              
+                <li><a href="https://www.netflix.com" target="_blank"> Netflix</a></li>
+                <li><a href="https://www.youtube.com/user/netflixnordics" target="_blank">Youtube</a></li>
+                <li><a href="https://www.instagram.com/NetflixNordic" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/Netflixnordic" target="_blank">Twitter</a></li>
+                <!--De fyra knapparna med länkar-->
             </ul>
             <hr class="uppe">
         </nav>
         <div class="a">
-            <p>Google är ett företag som erbjuder tjänster och hårdvarda världen över. Bland deras tjänster så innefattas bland annat världens populäraste sökmotor, videospelare, webbläsare och mobila oprativsystem. Ovan så hittar du 4 länkar som leder till dessa 4 tjänsterna från Google. </p>
-        </div>
-        <div class="b">
-            <img src="Apps.png" alt="apps">
+            <p>Netflix, Inc. is an American over-the-top media service and original programming production company. It offers subscription-based video on demand from a library of films and television series, 40% of which is Netflix original programming produced in-house. Netflix has also played a prominent role in independent film distribution. As of July 2021, Netflix had 209 million subscribers, including 72 million in the United States and Canada.[8] It is available worldwide except in mainland China (due to local restrictions), Syria, North Korea, and Crimea (due to US sanctions). Netflix is a member of the Motion Picture Association (MPA).    </p>
+            <img src="Apps.png" alt="apps" >
         </div>
         <div class="row">
-            <hr>
+            <hr class="nere">
             <div class="column">
-                <h1>Google's kontor</h1>
+                <h1>Bridgerton</h1>
                 <img src="cykel.png" alt="Google kontor">
-                <p>Detta är en bild på Google's kontor </p>
-                <p>"GooglePlex" som ligger i kalifornia</p>
-            </div>
-            <div class="column">
-                <h1>Google's kontor</h1>
-                <img src="cykel.png" alt="Google kontor">
-                <p>Detta är en bild på Google's kontor </p>
-                <p>"GooglePlex" som ligger i kalifornia</p>
+                <p>Bridgerton is a drama series that takes place in early 1800's</p>
+                <p>London and centers around the Bridgerton family. They live in</p>
+                <p>in an upper-class society were it's hard to live up to the </p>
+                <p>standards of the society.</p>
             </div>
             <div class="column">
-                <h1>Google's kontor</h1>
-                <img src="cykel.png" alt="Google kontor">
-                <p>Detta är en bild på Google's kontor </p>
-                <p>"GooglePlex" som ligger i kalifornia</p>
+                <h1>La Casa De Papel</h1>
+                <img src="heist.png" alt="Google kontor">
+                <p>"La Casa De Papel"(Money Heist) is an spanish television series.  </p>
+                <p>The series traces 2 long-prepared heists led by "the Professor.
+                <p>They are trying to be the good guys by not harming innocent but</p>
+                <p>at the same time they are stealing millions and millions of dollars</p>
+                </p>
             </div>
+            <div class="column">
+                <h1>Ozark</h1>
+                <img src="ozark.png" alt="Google kontor">
+                <p>Ozark is an American crime television series. The series stars</p>
+                <p>Jason Bateman and Laura Linney as Marty and Wendy Byrde, a married </p>
+                <p>couple who relocate their family to the lake of the ozarks for money</p>
+                <p>laundering. </p>
             </div>
+        </div>
+            <!--De 3 lika uppdelade delarna i botten med bild och text-->
         <footer> 
             <hr>
-            <p>Made by</p>
-            <h4>Malte Lindberg</h4>
+            <h5>© 2021-2021 Malte Lindberg, inc.</h5>
         </footer>
     </body>
 </html>
