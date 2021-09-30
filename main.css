@@ -2,11 +2,37 @@
     margin: 0;
     padding: 0;
 }
+:root {
+  --background-color: #141414;
+  --text-color: #fff;
+}/*Detta är variabeln standard färgläggningen för sidan*/
 
-header{
-    text-align: center;
+
+[data-theme="dark"] {
+  --background-color: #fff;
+  --text-color: #141414;
+}/*Detta är variabeln för "dark mode" för hemsidan*/
+
+#theme-switcher{
+  float: right;
+  margin-top: 5px;
+  margin-right: 25px;
+  display:block;
+  color: var(--text-color);
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size:x-large;
+  font-family: Helvetica;
+  border: 3px solid var(--text-color);
+  border-radius: 4px;
+  transition: background-color 300ms ease-in 0ms;/*detta skapar en animation av effekten när man håller på knapparna*/
+  background-color: var(--background-color);
+}
+
+header img{
+    padding-left: 820px;
     padding-top: 30px;
-    background-color:#5cdb95;
     opacity: 0.99;
 }
 
@@ -16,7 +42,6 @@ ul {
   padding-left: 734.6335px;
   overflow: hidden;
   text-align: center;
-  background-color: #5cdb95;
 }
 
 li {
@@ -27,39 +52,38 @@ li {
 
 li a {
   display:block;
-  color: #05386b;
+  color: var(--text-color);
   text-align: center;
   padding: 8px;
   text-decoration: none;
   font-size:x-large;
-  font-family: sans-serif;
-  border: 3px solid #05386b;
+  font-family: Helvetica;
+  border: 3px solid var(--text-color);
   border-radius: 4px;
+  transition: background-color 300ms ease-in 0ms;/*detta skapar en animation av effekten när man håller på knapparna*/
 }
 
-li a:hover {
-  background-color: #8ee4af;/* detta ändrar färgen på knappen när man håller musen över den*/
+#theme-switcher:hover, li a:hover {
+  background-color: #404040; /* detta ändrar färgen på knappen när man håller musen över den*/
   border-radius: 4px;
 }
-body{
-  background-color: #5cdb95;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
-div.a{
-  margin-top: 5%;
-  margin-left: 4%;
-  margin-right: 20%;
+
+div.a img{
+  padding-left: 1650px;
 }
 
 div.a p{
-  font-size: xx-large;
-  font-family: sans-serif;
-  color: #05386b;
+  margin-top: 5%;
+  margin-left: 4%;
+  margin-right: 25%;
+  font-size: x-large;
+  font-family: Helvetica;
+  color: var(--text-color);
   text-align: left;
-}
-
-div.b img{
-  float: right;
-  margin-right: 40px;
 }
 
 div.column{
@@ -69,14 +93,15 @@ div.column{
   text-align: center;
 }
 div.column{
-  font-family: sans-serif;/*ändra fonten*/
-  color: #05386b;
+  font-family: Helvetica; /*ändra fonten*/
+  color: var(--text-color);
 }
 div.column p{
   font-size: large;
 }
 div.column img{
   border-radius: 16px;/*rundade kanter på de tre bilderna*/
+  margin-top: 20px;
 }
 
 div.row{
@@ -95,13 +120,13 @@ div.row:after{
 }
 footer{
   text-align: center;
-  font-family: sans-serif;
+  font-family: Helvetica;
   margin-top: 50px;
   margin-bottom: 30px;
-  color: #05386b;
+  color: var(--text-color);
 }
 hr{
-  border: 3px solid #05386b;
+  border: 3px solid var(--text-color);
   border-radius: 4px;
   margin: 10px;
 
