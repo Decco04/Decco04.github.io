@@ -85,7 +85,7 @@ nav{
     transition: all 0.5s ease;
 }
 .menu-hide ul li:hover{
-    background-color: #877240;
+    background-color: rgba(212, 191, 142, 0.7);
     transition: all 0.5s ease;
 }
 .menu-hide ul li a{
@@ -100,7 +100,7 @@ nav{
 }
 .menu-hide.show {
     left: 0px;
-    background-color: rgba(140, 147, 168, 0.2);
+    background-color: rgba(212, 191, 142, 0.7);
     transition: all 0.3s ease-in-out;
 }
 #logo{
