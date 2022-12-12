@@ -1,10 +1,4 @@
-const menuToggle = document.querySelector(".menu-btn");
 
-menuToggle.addEventListener("click", () => {
-	menuToggle.classList.toggle("change");
-    menuToggle.classList.toggle("menu-hide");
-
-});
 
 document.querySelector(document).ready(function(){
     document.querySelector('#menu').click(function(){
@@ -12,5 +6,11 @@ document.querySelector(document).ready(function(){
     });
     document.querySelector('a').click(function(){
       document.querySelector('.menu-hide').classList.remove('show');
+    });
+    document.querySelector('#menu').click(function(){
+      document.querySelector('#menu').classList.toggle('ham_move');
+    });
+    document.querySelector('a').click(function(){
+      document.querySelector('#menu').classList.remove('ham_move');
     });
   });

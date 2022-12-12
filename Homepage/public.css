@@ -16,17 +16,22 @@ body{
     flex-direction: column;
 }
 nav{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
     width: 100%;
     z-index: 2;
     height: 80px;
 }
 #menu{
-    margin-left: 16.8%;
+    justify-self: right;
+    margin-right: 2%;
     cursor: pointer;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 10;
 }
 .ham{
     cursor: pointer;
@@ -36,14 +41,15 @@ nav{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: 11;
 }
-  .hamRotate.active{
+.hamRotate.active{
     transform: rotate(45deg);
 }
-  .hamRotate180.active{
+.hamRotate180.active{
     transform: rotate(80deg);
 }
-  .line{
+.line{
     fill:none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     stroke:#000;
@@ -53,22 +59,22 @@ nav{
 .ham4 .top{
     stroke-dasharray: 40 121;
 }
-  .ham4 .bottom{
+.ham4 .bottom{
     stroke-dasharray: 40 121;
 }
-  .ham4.active .top{
+.ham4.active .top{
     stroke-dashoffset: -68px;
 }
-  .ham4.active .bottom{
+.ham4.active .bottom{
     stroke-dashoffset: -68px;
 }
 
 .menu-hide {
     width: 345px;
-    left: -345px;
+    right: -345px;
     height: 100vh;
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     top: 0px;
     transition: all 0.3s ease-in-out;
     cursor: default;
@@ -99,20 +105,18 @@ nav{
     font-family: 'Apercu Pro', sans-serif;
 }
 .menu-hide.show {
-    left: 0px;
+    right: 0px;
     background-color: rgba(212, 191, 142, 0.7);
     transition: all 0.3s ease-in-out;
 }
 #logo{
-    justify-self: center;
-    margin-top: 16px;
-    position: absolute;
+    margin-top: 20px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    margin-left: 5%;
 }
 #logo1{
-    width: 350px;
+    width: 300px;
     height: auto;
     opacity: 1;
     transition: opacity ease-in-out 0.2s;
