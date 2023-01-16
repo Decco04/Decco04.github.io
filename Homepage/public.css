@@ -90,7 +90,7 @@ nav{
     transition: all 0.5s ease;
 }
 .menu-hide ul li:hover{
-    background-color: rgba(212, 191, 142, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease;
 }
 .menu-hide ul li a{
@@ -99,14 +99,14 @@ nav{
     text-decoration: none;
 }
 .menu-hide ul li a p{
-    color: black;
+    color: white;
     font-weight: 800;
     font-size: 27px;
     font-family: 'Apercu Pro', sans-serif;
 }
 .menu-hide.show {
     right: 0px;
-    background-color: rgba(212, 191, 142, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
 }
 #logo{
