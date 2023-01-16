@@ -1,5 +1,4 @@
 
-
 document.querySelector(document).ready(function(){
     document.querySelector('#menu').click(function(){
       document.querySelector('.menu-hide').classList.toggle('show');
