@@ -13,3 +13,5 @@ document.querySelector(document).ready(function(){
       document.querySelector('#menu').classList.remove('ham_move');
     });
   });
+
+
