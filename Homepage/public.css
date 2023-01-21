@@ -11,6 +11,7 @@ body, html{
     width: 100vw;
     height: 100%;
     background-color: #C7CBC0;
+    overflow-x: hidden;
 }
 body{
     display: flex;
@@ -32,7 +33,7 @@ nav{
     cursor: pointer;
     display: flex;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
 }
 .ham{
     cursor: pointer;
@@ -42,7 +43,7 @@ nav{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: 11;
+    z-index: 101;
 }
 .hamRotate.active{
     transform: rotate(45deg);

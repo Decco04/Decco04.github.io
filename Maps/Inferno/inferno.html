@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Public files/public.css">
+    <link rel="stylesheet" href="/Homepage/public.css">
+    <link rel="stylesheet" href="inferno.css">
     <title>CSGO UTILITY | INFERNO</title>
 </head>
 <body>
     <nav>
         <div id="logo">
-            <a href="index.html"><img id="logo1"src="images/CSGO UTILITY logo.png" alt="" ></a>
+            <a href="/Homepage/index.html"><img id="logo1"src="images/CSGO UTILITY logo.png" alt="" ></a>
         </div>
         <div id="menu">
             <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="90" onclick="this.classList.toggle('active'); document.querySelector('.menu-hide').classList.toggle('show');" > <!--"Flippin' burgers" av Mikael Ainalem på codepen.io.-->
@@ -26,14 +27,31 @@
             </svg>
             <div class="menu-hide">
                 <ul>
-                    <li><a href="index.html"><p>Home</p></a></li>
+                    <li><a href="/Homepage/index.html"><p>Home</p></a></li>
                     <li><a href="#"><p>Guides</p></a></li>
                     <li><a href="#"><p>About</p></a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <main>
+        <section id="centerContainer">
+            <div id="radarContainer">
+                <div id="radar">
+                    <div id="typeFilterContainer">
+                        <div class="typeFilterItem"></div>
+                        <div class="typeFilterItem"></div>
+                        <div class="typeFilterItem"></div>
+                        <div class="typeFilterItem"></div>
+                    </div>
+                    <img id="radarImg" src="images/inferno.jpg" alt="">
+                </div>
+            </div>
+            <div id="mapLinks"></div>
+        </section>
+    </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/Public files/nav.js"></script>
 </body>
 </html>

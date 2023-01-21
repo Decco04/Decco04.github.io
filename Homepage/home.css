@@ -33,27 +33,55 @@ main{
     font-weight: 800;
     font-family: 'Apercu Pro', sans-serif;
 }
-.bread-text-left{
+#bread-text-left{
     position: absolute;
+    width: 49%;
     top: 15%;
     left: 7%;
 }
-.bread-text-right{
+@keyframes bread-text-left-animation{
+    0%{
+        opacity: 0;
+        left: -48%;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        left: 7%;
+    }
+}
+#bread-text-right{
     position: absolute;
-    left: 67%;
+    width: 33%;
+    left: 100%;
     top: 30%;
     right: 0;
 }
+@keyframes bread-text-right-animation{
+    0%{
+        opacity: 0;
+        left: 100%;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        left: 67%;
+    }
+}
+
 .container-center{
     width: 100vw;
     height: 11%;
     
 }
+
 .container-bottom{
     width: 95vw;
     height: 44%;
 }
-.parent{
+#parent{
     margin-top: 1%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -62,8 +90,10 @@ main{
     grid-row-gap: 0px;
     height: 100%;
     width: 100%;
+    opacity: 0;
+    z-index: -10;
+
 }
-    
 .gridDiv1{
     grid-area: 1 / 4 / 3 / 5;
 }
@@ -84,6 +114,9 @@ main{
     width: 100%;
     height: 100%;
 }
+.grid-link{
+    z-index: -10;
+}
 .map-text{
     color: #363930;
     font-size: 37px;
@@ -102,3 +135,26 @@ main{
     -webkit-transform: translate(0,-10px);
     transform: translate(0,-1%);
 }
+@keyframes maps-animation{
+    0%{
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+#myVideo{
+    opacity: 0;
+}
+@keyframes map-video-animation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
