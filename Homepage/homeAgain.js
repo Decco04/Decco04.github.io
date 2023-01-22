@@ -9,13 +9,12 @@
     function loadAnimation2() {
         document.getElementById('bread-text-right').style.animation="bread-text-right-animation 1.5s cubic-bezier(.33,.17,.37,1)";
         document.getElementById('bread-text-right').style.left="67%"
-        window.setTimeout(loadAnimation3, 850);
-
+        window.setTimeout(loadAnimation3, 1500);
+        window.setTimeout(loadAnimation4, 1000);
     }
     function loadAnimation3() {
-        document.getElementById('myVideo').style.animation="map-video-animation 2.5s cubic-bezier(.33,.17,.37,1)";
+        document.getElementById('myVideo').style.animation="map-video-animation 1.5s cubic-bezier(.33,.17,.37,1)";
         document.getElementById('myVideo').style.opacity="1";
-        window.setTimeout(loadAnimation4, 750);
     }
     function loadAnimation4() {
         var elems = document.getElementsByClassName('grid-link'),
