@@ -35,77 +35,95 @@
         </div>
     </nav>
     <main>
+        <div id="myModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1>Some text in the Modal..</h1>
+              <video preload="auto" autoplay="auto" re src="https://giant.gfycat.com/IndelibleSphericalGalago.mp4"></video>
+            </div>
+          
+          </div>
         <section id="centerContainer">
             <div id="radarContainer">
                 <div id="radar">
                     <div id="typeFilterContainer">
                         <div class="typeFilterItem">
-                            <button class="typeFilterButton">
+                            <button class="typeFilterButton" id="smokeFilter" onclick="showSmoke()">
                                 <img class="filterIcon" src="/Maps/Public images/SmokeIcon.svg" alt="">
                             </button>
                         </div>
                         <div class="typeFilterItem">
-                            <button class="typeFilterButton">
+                            <button class="typeFilterButton" id="flashFilter" onclick="showFlash()">
                                 <img class="filterIcon" src="/Maps/Public images/FlashbangIcon.svg" alt="" style="width: 80%;">
                             </button>
                         </div>
                         <div class="typeFilterItem">
-                            <button class="typeFilterButton">
-                                <img class="filterIcon" src="/Maps/Public images/Molotov icon.svg" alt="">
+                            <button class="typeFilterButton" id="moloFilter" onclick="showMolo()">
+                                <img class="filterIcon" src="/Maps/Public images/Molotov icon.svg" alt="" style="width: 40%; height: 70%;">
                             </button>
                         </div>
                         <div class="typeFilterItem">
-                            <button class="typeFilterButton">
+                            <button class="typeFilterButton" id="heFilter" onclick="showHe()">
                                 <img class="filterIcon" src="/Maps/Public images/HeIcon.svg" alt="" style="width: 60%;">
                             </button>
                         </div>
                     </div>
                     <div id="sideFilterContainer">
                         <div class="sideFilterItem">
-                            <button class="sideFilterButton">
+                            <button class="sideFilterButton" id="bothFilter" onclick="showBoth()">
                                 <img class="sideFilterIcon" src="/Maps/Public images/Ct-tIcon.svg" alt="">
                             </button>
                         </div>
                         <div class="sideFilterItem">
-                            <button class="sideFilterButton">
+                            <button class="sideFilterButton" id="tFilter" onclick="showT()">
                                 <img class="sideFilterIcon" src="/Maps/Public images/TLogo.svg" alt="">
                             </button>
                         </div>
                         <div class="sideFilterItem">
-                            <button class="sideFilterButton">
+                            <button class="sideFilterButton" id="ctFilter" onclick="showCt()">
                                 <img class="sideFilterIcon" src="/Maps/Public images/CtIcon.svg" alt="">
                             </button>
                         </div>
                     </div>
                     <div class="nadeButtons">
                     <img id="radarImg" src="images/inferno.jpg" alt="">
-                        <button class="smokeButton" style="left: 58%; top: 21%;">
+                        <button class="smokeButton tNade" style="left: 58%; top: 21%;">
                             <img src="/Maps/Public images/SmokeIcon.svg" alt="">
                         </button>
-                        <button class="smokeButton" style="left: 67.4%; top: 55%;">
+                        <button class="smokeButton tNade" style="left: 67.4%; top: 55%;">
                             <img src="/Maps/Public images/SmokeIcon.svg" alt="">
                         </button>
-                        <button class="smokeButton" style="left: 84.5%; top: 58%;">
+                        <button class="smokeButton tNade" style="left: 84.5%; top: 58%;">
                             <img src="/Maps/Public images/SmokeIcon.svg" alt="">
                         </button>
-                        <button class="smokeButton" style="left: 48.5%; top: 12%;">
+                        <button class="smokeButton tNade" style="left: 48.5%; top: 12%;">
                             <img src="/Maps/Public images/SmokeIcon.svg" alt="">
                         </button>
-                        <button class="smokeButton" style="left: 67%; top: 68%;">
+                        <button class="smokeButton tNade" style="left: 67%; top: 68%;">
                             <img src="/Maps/Public images/SmokeIcon.svg" alt="">
                         </button>
-                        <button class="smokeButton" style="left: 42%; top: 16%;">
+                        <button class="smokeButton ctNade" style="left: 42%; top: 16%;">
                             <img src="/Maps/Public images/SmokeIcon.svg" alt="">
                         </button>
 
-                        <button class="flashButton" style="left: 66.5%; top: 62%;">
+                        <button class="flashButton ctNade" style="left: 66.5%; top: 62%;">
                             <img src="/Maps/Public images/FlashbangIcon.svg" alt="">
                         </button>
-                        <button class="flashButton" style="left: 47%; top: 37%;">
+                        <button class="flashButton tNade" style="left: 47%; top: 37%;">
                             <img src="/Maps/Public images/FlashbangIcon.svg" alt="">
                         </button>
-                        <button class="flashButton" style="left: 82%; top: 85%;">
+                        <button class="flashButton tNade" style="left: 82%; top: 85%;">
                             <img src="/Maps/Public images/FlashbangIcon.svg" alt="">
+                        </button>
+
+                        <button class="moloButton tNade" style="left: 39.3%; top: 23%;">
+                            <img src="/Maps/Public images/Molotov icon.svg" alt="">
+                        </button>
+                        <button class="moloButton tNade" style="left: 48%; top: 25%;">
+                            <img src="/Maps/Public images/Molotov icon.svg" alt="">
+                        </button>
+                        <button class="moloButton tNade" style="left: 67%; top: 74%;">
+                            <img src="/Maps/Public images/Molotov icon.svg" alt="">
                         </button>
                     </div>
                 </div>
