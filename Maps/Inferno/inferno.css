@@ -24,10 +24,58 @@ main{
     flex-direction: column;
     align-items: center;
 }
+#mapLinksContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 61%;
+    height: 17%;
+    margin-left: 2%;
+}
+.mapLink{
+    width: 22%;
+    aspect-ratio: 5/1.7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2%;
+    overflow: hidden;
+    border: 4px white solid;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(.33,.17,.37,1);
+}
+.mapLink:hover .mapLinkText{
+    color: rgb(223, 222, 222);
+}
+.mapLink:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.35);
+}
+.mapLink p{
+    justify-self: right;
+    margin-right: 20%;
+    font-size: 1vw;
+    transition: all 0.4s cubic-bezier(.33,.17,.37,1);
+}
+.mapLink img{
+    width: 70%;
+    height: 70%;
+}
+.activeLink{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.35);
+}
+.activeLinkText{
+    color: rgb(223, 222, 222);
+}
 #radar{
     display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: repeat(14, calc(95% / 14));
+    grid-template-rows: repeat(13, calc(95% / 13));
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 70%;
@@ -36,12 +84,7 @@ main{
 #radarImg{
     width: 100%;
     height: 100%;
-
 }
-#mapLinks{
-    height: 15%;
-}
-
 #typeFilterContainer{
     grid-area: 1 / 2 / 2 / 6;
     display: flex;
@@ -119,10 +162,10 @@ main{
 }
 
 .nadeButtons{
-    grid-area: 2 / 2 / 14 / 15;
+    grid-area: 2 / 2 / 15 / 15;
     border-radius: 3px;
     border: 4px white solid;
-    box-shadow: 0 20px 60px 0 rgba(0,0,0,.35);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.35);
     margin-top: 1%;
     margin-left: 1%;
     position: relative;
@@ -185,6 +228,26 @@ main{
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.heButton{
+    width: 6%;
+    height: 6%;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: none;
+    transition: background 0.1s cubic-bezier(.33,.17,.37,1);
+    transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
+}
+.heButton img{
+    width: 80%;
+    height: 80%;
+}
+.heButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .tNade{
     transition: visibility 2s cubic-bezier(.33,.17,.37,1);
     transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
@@ -192,11 +255,11 @@ main{
 #bothFilter{
     background-color: rgba(0, 0, 0, 0.6);
 }
-/* modal css*/
+
 #myModal {
     position: absolute; 
     opacity: 0;
-    z-index: 1; 
+    z-index: 10; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -207,33 +270,46 @@ main{
     transition: all 0.3s cubic-bezier(.33,.17,.37,1);
     display: none;
   }
+  #modalContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .modal-content {
     background-color: #fefefe;
-    margin: 9% auto; 
     padding: 20px;
     width: 60%;
-    height: 65%;    
     border-radius: 1%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    box-shadow: 0 20px 60px 0 rgba(0,0,0,.35);
   }
   .modal-content h1{
-    font-size: 2.5em;
-    font-weight: 600;
-    margin: 0;
-    margin-bottom: 1%;
+    font-weight: 800;
+    position: absolute;
+    margin-top: 1%;
+    font-family: raleway;
   }
   .close {
     align-self: flex-end;
-    color: #aaa;
+    color: black;
     font-size: 55px;
     font-weight: bold;
-    transition: color 0.1s cubic-bezier(.33,.17,.37,1);
+    transition: color 0.2s cubic-bezier(.33,.17,.37,1);
   }
   .close:hover,
   .close:focus {
-    color: black;
+    color: #aaa;
     text-decoration: none;
     cursor: pointer;
+  }
+  #my-video{
+    width: 95%;
+    height: 60%;
+    margin-top: 1%;
+    padding-bottom: 2%;
   }

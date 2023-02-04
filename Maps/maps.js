@@ -47,15 +47,27 @@ function showSmoke(){
         }
         for (var i = 0; i < sizeFlash; i++) {
             flashButton[i].style.opacity="0";
-            flashButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeFlash; i++) {
+                    flashButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeMolo; i++) {
             moloButton[i].style.opacity="0";
-            moloButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeMolo; i++) {
+                    moloButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeHe; i++) {
             heButton[i].style.opacity="0";
-            heButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeHe; i++) {
+                    heButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         smokeButtonClicked = true;
         flashButtonClicked = false;
@@ -94,7 +106,11 @@ function showFlash(){
         heFilter.style.backgroundColor="rgba(0,0,0,0.2)";
         for (var i = 0; i < sizeSmoke; i++) {
             smokeButton[i].style.opacity="0";
-            smokeButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeSmoke; i++) {
+                    smokeButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeFlash; i++) {
             flashButton[i].style.opacity="1";
@@ -102,11 +118,19 @@ function showFlash(){
         }
         for (var i = 0; i < sizeMolo; i++) {
             moloButton[i].style.opacity="0";
-            moloButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeMolo; i++) {
+                    moloButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeHe; i++) {
             heButton[i].style.opacity="0";
-            heButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeHe; i++) {
+                    heButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         smokeButtonClicked = false;
         flashButtonClicked = true;
@@ -145,15 +169,27 @@ function showHe(){
         smokeFilter.style.backgroundColor="rgba(0,0,0,0.2)";
         for (var i = 0; i < sizeSmoke; i++) {
             smokeButton[i].style.opacity="0";
-            smokeButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeSmoke; i++) {
+                    smokeButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeFlash; i++) {
             flashButton[i].style.opacity="0";
-            flashButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeFlash; i++) {
+                    flashButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeMolo; i++) {
             moloButton[i].style.opacity="0";
-            moloButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeMolo; i++) {
+                    moloButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeHe; i++) {
             heButton[i].style.opacity="1";
@@ -196,11 +232,19 @@ function showMolo(){
         heFilter.style.backgroundColor="rgba(0,0,0,0.2)";
         for (var i = 0; i < sizeSmoke; i++) {
             smokeButton[i].style.opacity="0";
-            smokeButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeSmoke; i++) {
+                    smokeButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeFlash; i++) {
             flashButton[i].style.opacity="0";
-            flashButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeFlash; i++) {
+                    flashButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         for (var i = 0; i < sizeMolo; i++) {
             moloButton[i].style.opacity="1";
@@ -208,7 +252,11 @@ function showMolo(){
         }
         for (var i = 0; i < sizeHe; i++) {
             heButton[i].style.opacity="0";
-            heButton[i].style.zIndex="-2";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeHe; i++) {
+                    heButton[i].style.zIndex="-2";
+                }
+            } , 300);
         }
         smokeButtonClicked = false;
         flashButtonClicked = false;
@@ -240,7 +288,11 @@ function showCt(){
         bothFilter.style.backgroundColor="rgba(0,0,0,0.2)";
         for (var i = 0; i < sizeTNade; i++) {
             tNade[i].style.opacity="0";
-            tNade[i].style.visibility="hidden";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeTNade; i++) {
+                    tNade[i].style.visibility="hidden";
+                }
+            }, 300);
         }
         for (var i = 0; i < sizeCtNade; i++) {
             ctNade[i].style.opacity="1";
@@ -279,7 +331,10 @@ function showT(){
         }
         for (var i = 0; i < sizeCtNade; i++) {
             ctNade[i].style.opacity="0";
-            ctNade[i].style.visibility="hidden";
+            window.setTimeout(function(){
+                for (var i = 0; i < sizeCtNade; i++) {
+                ctNade[i].style.visibility="hidden";}
+            }, 300);
         }
         tButtonClicked = true;
         ctButtonClicked = false;
@@ -303,31 +358,25 @@ function showBoth(){
         bothButtonClicked = true;
 }
 
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("bothFilter");
-
-// Get the <span> element that closes the modal
+var modalContainer = document.getElementById("modalContainer");
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  window.setTimeout(function(){modal.style.opacity="1";}, 0);
-}
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    window.setTimeout(function(){modal.style.opacity="0";}, 0);
-  modal.style.display = "none";
+  window.setTimeout(function(){modal.style.opacity="0";}, 0);
+  window.setTimeout(function(){modal.style.display = "none";}, 300);
 }
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modalContainer) {
     window.setTimeout(function(){modal.style.opacity="0";}, 0);
-    modal.style.display = "none";
+    window.setTimeout(function(){modal.style.display = "none";}, 300);
   }
 } 
+
+var videoSource = document.getElementById("my-video");
+var videoText = document.getElementById("videoText");
+function nadeClick(videoLink , text){
+    videoSource.src = videoLink;
+    videoText.innerHTML = text;
+    modal.style.display = "block";
+    window.setTimeout(function(){modal.style.opacity="1";}, 0);
+}
