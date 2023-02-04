@@ -8,7 +8,7 @@
     }
     function loadAnimation2() {
         document.getElementById('bread-text-right').style.animation="bread-text-right-animation 1.5s cubic-bezier(.33,.17,.37,1)";
-        document.getElementById('bread-text-right').style.left="67%"
+        document.getElementById('bread-text-right').style.marginLeft="67%"
         window.setTimeout(loadAnimation3, 1500);
         window.setTimeout(loadAnimation4, 1000);
     }

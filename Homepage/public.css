@@ -12,6 +12,7 @@ body, html{
     height: 100%;
     background-color: #C7CBC0;
     overflow-x: hidden;
+    font-size: 100%;
 }
 body{
     display: flex;
@@ -81,6 +82,7 @@ nav{
     transition: all 0.3s ease-in-out;
     cursor: default;
 }
+
 .menu-hide ul{
     margin-top: 80px;
 }
@@ -107,7 +109,7 @@ nav{
     font-family: 'Apercu Pro', sans-serif;
 }
 .menu-hide.show {
-    right: 0px;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
 }
@@ -122,4 +124,13 @@ nav{
     height: auto;
     opacity: 1;
     transition: opacity ease-in-out 0.2s;
+}
+@media screen and (max-width: 600px){
+    .menu-hide{
+        width: 100%;
+        right: -100%;
+        backdrop-filter: blur(2px);
+    }
+    main{
+    }
 }
