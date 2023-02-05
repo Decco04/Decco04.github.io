@@ -2,13 +2,6 @@ var menuHidden = true;
 document.querySelector(document).ready(function(){
     document.querySelector('#menu').click(function(){
       document.querySelector('.menu-hide').classList.toggle('show');
-      if (menuHidden) {
-        menuHidden = false;
-      }
-      else {
-        menuHidden = true;
-
-      }
     });
     document.querySelector('a').click(function(){
       document.querySelector('.menu-hide').classList.remove('show');

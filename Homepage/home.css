@@ -69,7 +69,7 @@ main{
 
 .container-center{
     width: 100vw;
-    height: 50%;
+    height: 90px;
 }
 
 .container-bottom{
@@ -107,7 +107,6 @@ main{
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    height: 100%;
 }
 .grid-link{
     z-index: -10;
@@ -170,19 +169,59 @@ main{
         font-size: 25px;
     }
     #parent{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
     .gridDiv1{
-        grid-area: 1 / 1 / 2 / 3;
+        grid-area: 1 / 1 / 1 / 1;
     }
     .gridDiv2{
-        grid-area: 2 / 1 / 3 / 3;
+        grid-area: 2 / 1 / 2 / 1;
     }
     .gridDiv3{
-        grid-area: 3 / 1 / 4 / 3;
+        grid-area: 3 / 1 / 3 / 1;
     }
     .gridDiv4{
-        grid-area: 4 / 1 / 5 / 3;
+        grid-area: 4 / 1 / 4 / 1;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1400px) {
+    main{
+        grid-template-rows: 70% 5% 5%;
+    }
+    .container-upper{
+        height: 100%;
+    }
+    .container-upper p{
+        font-size: 100px;
+    }
+    .logo-text{
+        font-size: 100px;
+    }
+    .bread-text-left-points{
+        font-size: 80px;
+    }
+    .bread-text-right{
+        margin-left: 40%;
+    }
+    .map-text{
+        font-size: 20px;
+    }
+    #parent{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .gridDiv1{
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    .gridDiv2{
+        grid-area: 1 / 2 / 1 / 2;
+    }
+    .gridDiv3{
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    .gridDiv4{
+        grid-area: 2 / 2 / 2 / 2;
     }
 }
