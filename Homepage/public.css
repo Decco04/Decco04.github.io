@@ -131,6 +131,18 @@ nav{
         right: -100%;
         backdrop-filter: blur(2px);
     }
-    main{
+    #logo1{
+        width: 100%;
+        height: auto;
     }
+    nav{
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 80px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        width: 100%;
+        z-index: 2;
+        height: 80px;
+    }
+
 }

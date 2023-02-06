@@ -66,6 +66,18 @@ main{
         margin-left: 67%;
     }
 }
+@keyframes bread-text-right-animation-small{
+    0%{
+        opacity: 0;
+        margin-left: 0%;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        margin-left: -62%;
+    }   
+}
 
 .container-center{
     width: 100vw;
@@ -152,18 +164,26 @@ main{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     .container-upper{
-        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr;
+    }
+    #bread-text-right{
+        grid-area: 2 / 2 / 2 / 2;
+        margin-left: 100%;
+        width: 100%;
+        margin-top: 20%;
     }
     .container-upper p{
-        font-size: 50px;
+        font-size: 17vw;
     }
     .logo-text{
-        font-size: 60px;
+        font-size: 20vw;
     }
     .bread-text-left-points{
-        font-size: 30px;
+        font-size: 20vw;
     }
     .map-text{
         font-size: 25px;
@@ -184,26 +204,34 @@ main{
     .gridDiv4{
         grid-area: 4 / 1 / 4 / 1;
     }
+    .container-bottom{
+        margin-top: 5%;
+    }
+    #myVideo{
+        width: 350%;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1400px) {
-    main{
-        grid-template-rows: 70% 5% 5%;
-    }
     .container-upper{
-        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr;
+    }
+    #bread-text-right{
+        grid-area: 2 / 2 / 2 / 2;
+        margin-left: 100%;
+        width: 100%;
+        margin-top: 25%;
     }
     .container-upper p{
-        font-size: 100px;
+        font-size: 13vw;
     }
     .logo-text{
-        font-size: 100px;
+        font-size: 16vw;
     }
     .bread-text-left-points{
-        font-size: 80px;
-    }
-    .bread-text-right{
-        margin-left: 40%;
+        font-size: 16vw;
     }
     .map-text{
         font-size: 20px;
