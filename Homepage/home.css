@@ -5,10 +5,14 @@ main{
     margin-right: auto;
     display: grid;
     grid-template-columns: 1fr;
+    overflow: hidden;
 }
 .container-upper{
     width: 100%;
     height: 100%;
+}
+.scroll-down-container{
+    display: none;
 }
 
 .container-upper p{
@@ -165,10 +169,51 @@ main{
 }
 
 @media screen and (max-width: 450px) {
+    .scroll-down-container{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .scroll-down-arrow{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 24px;
+    }
+    .scroll-down-arrow svg{
+        position: absolute;
+        transition: bottom  0.5s ease;
+        animation: scroll-down-arrow-annimation 2s ease infinite;
+        bottom: 0;
+    }
+    @keyframes scroll-down-arrow-annimation{
+        0%{
+            bottom: 0;
+        }
+        50%{bottom: 5px;
+        }
+        100%{
+            bottom: 0;
+        }
+    }
+    .scroll-down-container p{
+        font-size: 20px;
+        font-weight: 600;
+        color: #363930;
+        font-family: 'Apercu Pro', sans-serif;
+        letter-spacing: 2px;
+    }
+    main{
+        overflow: visible;
+    }
     .container-upper{
         display: grid;
+        height: 100vh;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 45% 50%;
     }
     #bread-text-right{
         grid-area: 2 / 2 / 2 / 2;
@@ -213,6 +258,12 @@ main{
 }
 
 @media screen and (min-width: 600px) and (max-width: 1400px) {
+    main{
+        overflow: visible;
+    }
+    .scroll-down-container{
+        display: none;
+    }
     .container-upper{
         display: grid;
         grid-template-columns: 50% 50%;

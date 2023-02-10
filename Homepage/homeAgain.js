@@ -70,5 +70,15 @@
         document.getElementById('bread-text-right').style.marginLeft="67%";
           
         }
-      }      
-      window.addEventListener("resize", myFunction);
+      }  
+/*          
+      const scroller = document.querySelector(':root');
+      scroller.onscroll = scrollEvent();
+      scroller.addEventListener("scroll", (event) => {
+        
+      });
+      var scrollContainer = document.getElementsByClassName("scroll-down-container");
+      function scrollEvent(){
+        console.log("HEJHEJ");
+      }*/
+        
