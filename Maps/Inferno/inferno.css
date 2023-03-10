@@ -62,8 +62,9 @@ main{
     transition: all 0.4s cubic-bezier(.33,.17,.37,1);
 }
 .mapLink img{
-    width: 70%;
-    height: 70%;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
 }
 .activeLink{
     background-color: rgba(0, 0, 0, 0.6) !important;
@@ -182,7 +183,7 @@ main{
     transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
 }
 .smokeButton img{
-    width: 60%;
+    width: 65%;
     height: 80%;
 }
 .smokeButton:hover{
@@ -220,7 +221,7 @@ main{
     transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
 }
 .moloButton img{
-    width: 60%;
+    width: 65%;
     height: 80%;
 }
 .moloButton:hover{
@@ -240,7 +241,7 @@ main{
     transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
 }
 .heButton img{
-    width: 80%;
+    width: 65%;
     height: 80%;
 }
 .heButton:hover{

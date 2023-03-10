@@ -1,0 +1,316 @@
+body{
+    overflow: hidden;
+}
+main{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#centerContainer{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#radarContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mapLinksContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 61%;
+    height: 17%;
+    margin-left: 2%;
+}
+.mapLink{
+    width: 22%;
+    aspect-ratio: 5/1.7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2%;
+    overflow: hidden;
+    border: 4px white solid;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(.33,.17,.37,1);
+}
+.mapLink:hover .mapLinkText{
+    color: rgb(223, 222, 222);
+}
+.mapLink:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.35);
+}
+.mapLink p{
+    justify-self: right;
+    margin-right: 20%;
+    font-size: 1vw;
+    transition: all 0.4s cubic-bezier(.33,.17,.37,1);
+}
+.mapLink img{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+.activeLink{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.35);
+}
+.activeLinkText{
+    color: rgb(223, 222, 222);
+}
+#radar{
+    display: grid;
+    grid-template-columns: repeat(14, calc(95% / 14));
+    grid-template-rows: repeat(13, calc(95% / 13));
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 70%;
+    height: 100%;
+}
+#radarImg{
+    width: 100%;
+    height: 100%;
+}
+#typeFilterContainer{
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 87.75%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px white solid;
+    margin-left: 3%;
+}
+.typeFilterItem{
+    width: 25%;
+    height: 100%;
+    border-right:2px white solid;
+}
+.typeFilterItem:nth-child(4) {
+    border-right: none;
+}
+.typeFilterButton{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    transition: color 0.2s cubic-bezier(.33,.17,.37,1), background 0.5s cubic-bezier(.33,.17,.37,1);
+}
+.typeFilterButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.filterIcon{
+    width: 35%;
+}
+#sideFilterContainer{
+    margin-top: 10%;
+    grid-area: 2 / 1 / 7 / 1;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px white solid;
+}
+.sideFilterItem{
+    width: 100%;
+    height: 100%;
+    border-bottom:2px white solid;
+}
+.sideFilterIcon{
+    width: 80%;
+}
+.sideFilterButton{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    transition: color 0.2s cubic-bezier(.33,.17,.37,1), background 0.5s cubic-bezier(.33,.17,.37,1);
+}
+.sideFilterButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.nadeButtons{
+    grid-area: 2 / 2 / 15 / 15;
+    border-radius: 3px;
+    border: 4px white solid;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.35);
+    margin-top: 1%;
+    margin-left: 1%;
+    position: relative;
+}
+.smokeButton{
+    width: 4%;
+    height: 6%;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: none;
+    transition: background 0.1s cubic-bezier(.33,.17,.37,1);
+    transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
+}
+.smokeButton img{
+    width: 65%;
+    height: 80%;
+}
+.smokeButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.flashButton{
+    width: 5%;
+    height: 6%;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: none;
+    transition: background 0.1s cubic-bezier(.33,.17,.37,1);
+    transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
+}
+.flashButton img{
+    width: 80%;
+    height: 80%;
+}
+.flashButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.moloButton{
+    width: 4%;
+    height: 6%;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: none;
+    transition: background 0.1s cubic-bezier(.33,.17,.37,1);
+    transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
+}
+.moloButton img{
+    width: 65%;
+    height: 80%;
+}
+.moloButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.heButton{
+    width: 6%;
+    height: 6%;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: none;
+    transition: background 0.1s cubic-bezier(.33,.17,.37,1);
+    transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
+}
+.heButton img{
+    width: 65%;
+    height: 80%;
+}
+.heButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.tNade{
+    transition: visibility 2s cubic-bezier(.33,.17,.37,1);
+    transition: opacity 0.2s cubic-bezier(.33,.17,.37,1);
+}
+#bothFilter{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#myModal {
+    position: absolute; 
+    opacity: 0;
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.3s cubic-bezier(.33,.17,.37,1);
+    display: none;
+  }
+  #modalContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    width: 60%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 20px 60px 0 rgba(0,0,0,.35);
+  }
+  .modal-content h1{
+    font-weight: 800;
+    position: absolute;
+    margin-top: 1%;
+    font-family: raleway;
+  }
+  .close {
+    align-self: flex-end;
+    color: black;
+    font-size: 55px;
+    font-weight: bold;
+    transition: color 0.2s cubic-bezier(.33,.17,.37,1);
+  }
+  .close:hover,
+  .close:focus {
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #my-video{
+    width: 95%;
+    height: 60%;
+    margin-top: 1%;
+    padding-bottom: 2%;
+  }
