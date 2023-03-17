@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Homepage/public.css">
+    <link rel="stylesheet" href="vertigo.css">
+    <link href="https://vjs.zencdn.net/8.0.3/video-js.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/apercu-pro" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
+    <title>CSGO UTILITY | VERTIGO</title>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <a href="/index.html"><img id="logo1"src="images/CSGO UTILITY logo.png" alt="" ></a>
+        </div>
+        <div id="menu">
+            <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="90" onclick="this.classList.toggle('active'); document.querySelector('.menu-hide').classList.toggle('show');" > <!--"Flippin' burgers" av Mikael Ainalem på codepen.io.-->
+                <path
+                      class="line top"
+                      d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                <path
+                      class="line middle"
+                      d="m 70,50 h -40" />
+                <path
+                      class="line bottom"
+                      d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+            </svg>
+            <div class="menu-hide">
+                <ul>
+                    <li><a href="/index.html"><p>Home</p></a></li>
+                    <li><a href="#"><p>Guides</p></a></li>
+                    <li><a href="#"><p>About</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="myModal">
+            <div id="modalContainer">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1 id="videoText">ONE WAY SMOKE B SITE</h1>
+                    <video
+                    id="my-video"
+                    class="video-js"
+                    controls
+                    preload="auto"
+                    width="640"
+                    height="264"
+                    poster="MY_VIDEO_POSTER.jpg"
+                    data-setup="{}"
+                    autoplay="true"
+                    muted="true"
+                    loop="true">
+                    <source id="videoSource" src="https://giant.gfycat.com/RaggedRespectfulAfricanclawedfrog.mp4" type="video/mp4" />
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to aweb browser that<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                    </video>
+                  </div>
+              </div>
+            </div>
+        <section id="centerContainer">
+            <div id="radarContainer">
+                <div id="radar">
+                    <div id="typeFilterContainer">
+                        <div class="typeFilterItem">
+                            <button class="typeFilterButton" id="smokeFilter" onclick="showSmoke()">
+                                <img class="filterIcon" src="/Maps/Public images/Smoke.png" alt="">
+                            </button>
+                        </div>
+                        <div class="typeFilterItem">
+                            <button class="typeFilterButton" id="flashFilter" onclick="showFlash()">
+                                <img class="filterIcon" src="/Maps/Public images/Flashbang.png" alt="" style="width: 80%;">
+                            </button>
+                        </div>
+                        <div class="typeFilterItem">
+                            <button class="typeFilterButton" id="moloFilter" onclick="showMolo()">
+                                <img class="filterIcon" src="/Maps/Public images/Molotov.png" alt="" style="width: 40%; height: 70%;">
+                            </button>
+                        </div>
+                        <div class="typeFilterItem">
+                            <button class="typeFilterButton" id="heFilter" onclick="showHe()">
+                                <img class="filterIcon" src="/Maps/Public images/HeIcon.png" alt="" style="width: 60%;">
+                            </button>
+                        </div>
+                    </div>
+                    <div id="sideFilterContainer">
+                        <div class="sideFilterItem">
+                            <button class="sideFilterButton" id="bothFilter" onclick="showBoth()">
+                                <img class="sideFilterIcon" src="/Maps/Public images/Ct-tIcon.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="sideFilterItem">
+                            <button class="sideFilterButton" id="tFilter" onclick="showT()">
+                                <img class="sideFilterIcon" src="/Maps/Public images/TLogo.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="sideFilterItem">
+                            <button class="sideFilterButton" id="ctFilter" onclick="showCt()">
+                                <img class="sideFilterIcon" src="/Maps/Public images/CtIcon.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nadeButtons">
+                    <img id="radarImg" src="images/vertigo.jpg" alt="">
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/UnlinedEarlyCaterpillar.mp4', 'RIGHT SIDE GENERATOR SMOKE' )" style="left: 37%; top: 27%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/ThoughtfulWigglyAmericanshorthair.mp4', 'LEFT SIDE GENERATOR SMOKE' )" style="left: 38%; top: 21%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/DrearyCleverDog.mp4', 'WINDOW SMOKE' )" style="left: 45%; top: 29%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/EnragedShockingEarthworm.mp4', 'B STAIRS ONE-WAY SMOKE' )" style="left: 21%; top: 46%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/JealousEssentialBufeo.mp4', 'CT SMOKE' )" style="left: 53.5%; top: 32%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/RapidGlossyGroundhog.mp4', 'ELEVATOR SMOKE' )" style="left: 56.4%; top: 42%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/BoldBarrenKiwi.mp4', 'RIGHT SIDE A SITE' )" style="left: 74%; top: 55%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton tNade" onclick="nadeClick('https://giant.gfycat.com/SecondaryWeeklyGoldfish.mp4', 'LEFT SIDE A SITE' )" style="left: 69%; top: 55%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+                        <button class="smokeButton ctNade" onclick="nadeClick('https://giant.gfycat.com/GranularBouncyCarpenterant.mp4', 'DEEP RAMP' )" style="left: 61%; top: 58%;">
+                            <img src="/Maps/Public images/Smoke.png" alt="">
+                        </button>
+
+                        <button class="flashButton tNade" onclick="nadeClick('https://giant.gfycat.com/FlamboyantNeatJanenschia.mp4', 'B SITE FLASH')" style="left: 27%; top: 27%;">
+                            <img src="/Maps/Public images/Flashbang.png" alt="">
+                        </button>
+                        <button class="flashButton tNade" onclick="nadeClick('https://giant.gfycat.com/ZealousSpiffyClingfish.mp4', 'MID POP FLASH')" style="left: 35%; top: 46%;">
+                            <img src="/Maps/Public images/Flashbang.png" alt="">
+                        </button>
+                        <button class="flashButton ctNade" onclick="nadeClick('https://giant.gfycat.com/NearBadBeaver.mp4', 'SHORT POP FLASH')" style="left: 53%; top: 59%;">
+                            <img src="/Maps/Public images/Flashbang.png" alt="">
+                        </button>
+                        <button class="flashButton ctNade" onclick="nadeClick('https://giant.gfycat.com/MessyThoseAmericancrayfish.mp4', 'TOP RAMP POP FLASH')" style="left: 60%; top: 75%;">
+                            <img src="/Maps/Public images/Flashbang.png" alt="">
+                        </button>
+                        
+                        <button class="moloButton tNade" onclick="nadeClick('https://giant.gfycat.com/LikableWavyCub.mp4', 'SHORT MOLO')" style="left: 59%; top: 57%;">
+                            <img src="/Maps/Public images/Molotov.png" alt="">
+                        </button>
+                        <button class="moloButton tNade" onclick="nadeClick('https://giant.gfycat.com/WeeDazzlingAfricangoldencat.mp4', 'B HEADSHOT MOLO')" style="left: 29%; top: 15%;">
+                            <img src="/Maps/Public images/Molotov.png" alt="">
+                        </button>
+                        <button class="moloButton tNade" onclick="nadeClick('https://giant.gfycat.com/NippyMixedBarnswallow.mp4', 'WINDOW MOLO')" style="left: 43%; top: 28%;">
+                            <img src="/Maps/Public images/Molotov.png" alt="">
+                        </button>
+                        <button class="moloButton ctNade" onclick="nadeClick('https://giant.gfycat.com/HomelyEqualBlackfish.mp4', 'RAMP MOLO')" style="left: 61.5%; top: 65%;">
+                            <img src="/Maps/Public images/Molotov.png" alt="">
+                        </button>
+
+                        <button class="heButton tNade" onclick="nadeClick('https://giant.gfycat.com/BlaringSomeBluebird.mp4', 'A PLANT HE')" style="left: 77%; top: 52%;">
+                            <img src="/Maps/Public images/HeIcon.png" alt="">
+                        </button>
+                        <button class="heButton ctNade" onclick="nadeClick('https://giant.gfycat.com/WellwornHalfAustraliankelpie.mp4', 'MID HE')" style="left: 35%; top: 53%;">
+                            <img src="/Maps/Public images/HeIcon.png" alt="">
+                        </button>
+                        <button class="heButton ctNade" onclick="nadeClick('https://giant.gfycat.com/AcceptableBoldGavial.mp4', 'A PLANT HE')" style="left: 70%; top: 60%;">
+                            <img src="/Maps/Public images/HeIcon.png" alt="">
+                        </button>
+                        <button class="heButton ctNade" onclick="nadeClick('https://giant.gfycat.com/ThoroughAromaticAmberpenshell.mp4', 'A RAMP HE')" style="left: 61%; top: 70%;">
+                            <img src="/Maps/Public images/HeIcon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mapLinksContainer">
+                <a href="/Maps/Vertigo/vertigo.html" class="mapLink activeLink">
+                    <img src="/Maps/Public images/vertigoicon.png" alt="">
+                    <p class="mapLinkText activeLinkText">VERTIGO</p>
+                </a>
+                <a href="/Maps/Inferno/inferno.html" class="mapLink">
+                    <img src="/Maps/Public images/InfernoIcon.png" alt="">
+                    <p class="mapLinkText">INFERNO</p>
+                </a>
+                <a href="/Maps/Mirage/mirage.html" class="mapLink">
+                    <img src="/Maps/Public images/mirageIcon.png" alt="">
+                    <p class="mapLinkText">MIRAGE</p>
+                </a>
+                <a href="/Maps/Nuke/nuke.html" class="mapLink">
+                    <img src="/Maps/Public images/NukeIcon.png" alt="">
+                    <p class="mapLinkText">NUKE</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/Homepage/nav.js"></script>
+    <script src="/Maps/maps.js"></script>
+</body>
+</html>
