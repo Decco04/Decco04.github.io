@@ -107,6 +107,7 @@ nav{
     font-weight: 800;
     font-size: 27px;
     font-family: 'Apercu Pro', sans-serif;
+    z-index: 100;
 }
 .menu-hide.show {
     right: 0;
