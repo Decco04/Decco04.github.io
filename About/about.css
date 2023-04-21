@@ -19,13 +19,15 @@ main{
     display: flex;
 }
 #BackgroundContainer img{
-    height: 60%;
+    height: 50%;
     position: absolute;
-    left: 5%;
-    top: 25%;
+    left: 8%;
+    top: 28%;
+}
+#spinImg:hover{
+    cursor: pointer;
 }
 #BackgroundContainer img{
-    animation: slide 15s linear infinite;
 }
 @keyframes slide{
     0%{

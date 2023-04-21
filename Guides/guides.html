@@ -38,19 +38,29 @@
         </div>
     </nav>
     <main>
+        <div id="myModal">
+            <div id="modalContainer">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1 id="modalTitleText">ONE WAY SMOKE B SITE</h1>
+                    <img id="modalImage"src="" alt="">
+                    <p id="textContent"></p>
+                  </div>
+              </div>
+            </div>
         <p id="titleText"> GUIDES</p>
         <div class="container-bottom">
             <div id="parent">
                 <div class="gridDiv1 grid-item" id="grid-item-anim">
-                    <img class="grid-img" src="/Guides/images/Launch_print.PNG" alt="">
+                    <img class="grid-img" src="/Guides/images/Launch_print.PNG" alt="" onclick="guideClick('BEST LAUNCH OPTIONS', '/Guides/images/Launch_print.PNG', 'Here’s a short guide on the 5 best launch options for CS:GO: 1. -novid - disables the cinematic on the game launch. 2. -console - enables the in-game console. 3. -freq # - screen refresh frequency (for example, -freq 144). 4. +exec “filename” - automatically executes the filename config file on game launch. 5. -high - launches the game with high system priority. To set these launch options, follow these steps: Right-click on CS:GO in your Steam library and select “Properties”. Click on “Set Launch Options” and type in the launch options you want to use. Click “OK” to save the changes. Now, when you start CS:GO, these launch options will be automatically applied.')">
                     <p class="map-text">BEST LAUNCH OPTIONS</p>
                 </div>
                 <div class="gridDiv2 grid-item" id="grid-item-anim">
-                    <a class="grid-link" href=""><img class="grid-img" src="/Guides/images/faceit.png" alt=""></a>
-                    <p class="map-text">FACEIT</p>
+                    <img class="grid-img" src="/Guides/images/faceit.png" alt="" onclick="guideClick('HOW TO - FACEIT', '/Guides/images/faceit.png', 'FACEIT is a competitive gaming platform that allows players to compete in tournaments and leagues for popular games such as CS:GO. It offers a more competitive environment than regular matchmaking and is a great way to improve your skills and play with other skilled players. To play CS:GO on FACEIT, follow these steps: Create an account on the FACEIT website. Link your Steam account to your FACEIT account. Download and install the FACEIT client. Launch the FACEIT client and log in with your account. Join a CS:GO queue and wait for a match to be found. Once a match is found, you will be given instructions on how to join the game server.')">
+                    <p class="map-text">HOW TO - FACEIT</p>
                 </div>
                 <div class="gridDiv3 grid-item" id="grid-item-anim">
-                    <a class="grid-link" href=""><img class="grid-img" src="/Guides/images/jump.jpg" alt=""></a>
+                    <img class="grid-img" src="/Guides/images/jump.png" alt="" onclick="guideClick('JUMP BIND', '/Guides/images/jump.png', 'Open a text editor and type “bind key +jump; -attack”. Replace “key” with the key you want to use for the jump bind. Save the file as autoexec.cfg in your CS:GO config folder. The default location is C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg. Right-click on CS:GO in your Steam library and select Properties. Click on Set Launch Options” and type -exec autoexec.cfg in the text field. Click OK to save the changes. Now, when you start CS:GO, the jump bind will be automatically loaded and ready to use. ')">
                     <p class="map-text">JUMP BIND</p>
                 </div>
             </div> 
